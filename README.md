@@ -67,13 +67,6 @@ The MPU6050 connects to the Arduino via I2C (SDA/SCL), while the HM10 BLE module
 
 ---
 
-### Project Credits
-
-Developed by **Team 12 — What The Hack** for **CS 7470: Mobile & Ubiquitous Computing** at **Georgia Tech**.
-
-* **Core Contributors:** Colin James, Jason Bunyea, Pete Fuentes, Jasmine Manansala, John West.
-
-
 
 
 ## Project Structure
@@ -127,3 +120,9 @@ The main gesture recognition firmware with a modular, object-oriented architectu
 ### Data Collection
 
 Connect to the HM10 BLE module from a mobile device or serial terminal to receive streaming accelerometer data. The `WearableData/` directory contains sample gesture recordings for flick up and flick down motions.
+
+### Project Credits
+
+Developed by **Team 12 — What The Hack** for **CS 7470: Mobile & Ubiquitous Computing** at **Georgia Tech**.
+
+* **Core Contributors:** Colin James, Jason Bunyea, Pete Fuentes, Jasmine Manansala, John West.
