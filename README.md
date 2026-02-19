@@ -17,7 +17,7 @@ The prototype utilizes a modular hardware stack designed for low-power, wearable
 * **Connectivity:** HM10 Bluetooth Low Energy (BLE) module for wireless JSON data transmission.
 * **Feedback System:** LED-based visual indicators providing immediate HCI state confirmation.
 
-  | Component | Purpose |
+| Component | Purpose |
 |-----------|---------|
 | Arduino | Microcontroller |
 | MPU6050 | 6-axis accelerometer & gyroscope (I2C) |
