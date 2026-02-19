@@ -1,15 +1,58 @@
-# IoT Smart Glove
+IoT Smart Glove: Gesture-Based Ubiquitous Computing
+An wearable prototype redefining human-computer interaction through real-time motion classification.
 
-A wearable gesture recognition glove prototype built with an Arduino, MPU6050 accelerometer/gyroscope, and HM10 Bluetooth module. The glove captures hand motion data, detects gestures, and communicates results wirelessly over BLE.
+🎯 Project Vision
+The IoT Smart Glove was engineered to replace traditional remote controls with a seamless, gesture-based input system. By integrating low-latency hardware with a Random Forest classifier, the system recognizes dynamic hand gestures in real-time to facilitate intuitive control over smart home ecosystems.
 
-**Course:** CS 7470: Mobile & Ubiquitous Computing — Georgia Tech OMSCS
+🛠️ Technical Architecture
+Hardware Configuration
+The prototype utilizes a modular hardware stack designed for low-power, wearable efficiency:
 
-**Team 12 — What The Hack:**
-- Jason Bunyea
-- Pete Fuentes
-- Colin James
-- Jasmine Manansala
-- John West
+Microcontroller: Arduino-based logic for real-time processing.
+
+Inertial Measurement: MPU6050 6-axis accelerometer & gyroscope (I2C) for high-fidelity motion capture.
+
+Connectivity: HM10 Bluetooth Low Energy (BLE) module for wireless JSON data transmission.
+
+Feedback System: LED-based visual indicators providing immediate HCI state confirmation.
+
+Software & Gesture Pipeline
+The firmware is built on a modular, object-oriented architecture to ensure low latency and scalability:
+
+Sensor Abstraction (SensorHandler): Reads normalized 3-axis data at 100Hz intervals.
+
+Signal Segmentation: The ModelAssistant orchestrates the data pipeline to identify potential movement windows (e.g., Flick Up, Flick Down).
+
+Classification & Output: Recognized gestures are serialized into JSON payloads (e.g., {"ID": "type", "DATA": "flick_up"}) and transmitted over BLE.
+
+📈 Data & Machine Learning
+A custom dataset was curated to train the gesture recognition model, including multiple recording sessions for:
+
+Flick Down: High-velocity downward motion capture.
+
+Flick Up: Rapid upward wrist extension data.
+
+Dataset Management: The WearableData/ directory contains CSV-formatted accelerometer streams used for offline analysis and model validation.
+
+🚀 Getting Started
+Prerequisites
+Arduino IDE (Uno or compatible board).
+
+MPU6050 and HM10 BLE sensor modules.
+
+Prototyping components: Breadboard, 1K/2K Ohm resistors for voltage division.
+
+Installation
+Clone the Repo: git clone https://github.com/cjames/iot-smart-glove.git.
+
+Upload Firmware: Open what_the_hack.ino in the Arduino IDE to deploy the full gesture recognition pipeline.
+
+Connect: Use a mobile BLE terminal to pair with the HM10 and receive real-time gesture data.
+
+Project Credits
+Developed by Team 12 — What The Hack for CS 7470: Mobile & Ubiquitous Computing at Georgia Tech.
+
+Core Contributors: Colin James, Jason Bunyea, Pete Fuentes, Jasmine Manansala, John West.
 
 ## Hardware
 
