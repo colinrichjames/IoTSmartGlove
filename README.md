@@ -41,6 +41,24 @@ A custom dataset was curated to train the gesture recognition model, including m
 * MPU6050 and HM10 BLE sensor modules.
 * Prototyping components: Breadboard, 1K/2K Ohm resistors for voltage division.
 
+## Hardware
+
+| Component | Purpose |
+|-----------|---------|
+| Arduino | Microcontroller |
+| MPU6050 | 6-axis accelerometer & gyroscope (I2C) |
+| HM10 | Bluetooth Low Energy module (SoftwareSerial on pins 2/3) |
+| LED | Visual feedback indicator |
+| Breadboard | Prototyping circuit assembly |
+| 1K & 2K Ohm Resistors | Voltage divider for BLE module |
+
+
+### Circuit Diagram
+
+![Wearable Design](Wearable%20Design.png)
+
+The MPU6050 connects to the Arduino via I2C (SDA/SCL), while the HM10 BLE module communicates over SoftwareSerial (RX pin 2, TX pin 3) through a resistor voltage divider.
+
 ### Installation
 
 1. **Clone the Repo:** `git clone https://github.com/cjames/iot-smart-glove.git`.
@@ -57,22 +75,6 @@ Developed by **Team 12 — What The Hack** for **CS 7470: Mobile & Ubiquitous Co
 
 
 
-## Hardware
-
-| Component | Purpose |
-|-----------|---------|
-| Arduino | Microcontroller |
-| MPU6050 | 6-axis accelerometer & gyroscope (I2C) |
-| HM10 | Bluetooth Low Energy module (SoftwareSerial on pins 2/3) |
-| LED | Visual feedback indicator |
-| Breadboard | Prototyping circuit assembly |
-| 1K & 2K Ohm Resistors | Voltage divider for BLE module |
-
-### Circuit Diagram
-
-![Wearable Design](Wearable%20Design.png)
-
-The MPU6050 connects to the Arduino via I2C (SDA/SCL), while the HM10 BLE module communicates over SoftwareSerial (RX pin 2, TX pin 3) through a resistor voltage divider.
 
 ## Project Structure
 
