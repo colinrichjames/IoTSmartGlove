@@ -118,13 +118,6 @@ The main gesture recognition firmware with a modular, object-oriented architectu
 
 ## Getting Started
 
-### Prerequisites
-
-- Arduino IDE
-- Arduino board (Uno or compatible)
-- MPU6050 sensor module
-- HM10 BLE module
-
 ### Upload
 
 1. Open either `wearable_accel_gyro/wearable_accel_gyro.ino` or `what_the_hack/what_the_hack.ino` in the Arduino IDE.
