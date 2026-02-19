@@ -17,6 +17,15 @@ The prototype utilizes a modular hardware stack designed for low-power, wearable
 * **Connectivity:** HM10 Bluetooth Low Energy (BLE) module for wireless JSON data transmission.
 * **Feedback System:** LED-based visual indicators providing immediate HCI state confirmation.
 
+  | Component | Purpose |
+|-----------|---------|
+| Arduino | Microcontroller |
+| MPU6050 | 6-axis accelerometer & gyroscope (I2C) |
+| HM10 | Bluetooth Low Energy module (SoftwareSerial on pins 2/3) |
+| LED | Visual feedback indicator |
+| Breadboard | Prototyping circuit assembly |
+| 1K & 2K Ohm Resistors | Voltage divider for BLE module |
+
 ### Software & Gesture Pipeline
 
 The firmware is built on a modular, object-oriented architecture to ensure low latency and scalability:
@@ -40,18 +49,6 @@ A custom dataset was curated to train the gesture recognition model, including m
 * Arduino IDE (Uno or compatible board).
 * MPU6050 and HM10 BLE sensor modules.
 * Prototyping components: Breadboard, 1K/2K Ohm resistors for voltage division.
-
-## Hardware
-
-| Component | Purpose |
-|-----------|---------|
-| Arduino | Microcontroller |
-| MPU6050 | 6-axis accelerometer & gyroscope (I2C) |
-| HM10 | Bluetooth Low Energy module (SoftwareSerial on pins 2/3) |
-| LED | Visual feedback indicator |
-| Breadboard | Prototyping circuit assembly |
-| 1K & 2K Ohm Resistors | Voltage divider for BLE module |
-
 
 ### Circuit Diagram
 
